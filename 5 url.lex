@@ -2,10 +2,9 @@
 %}
 
 %%
+[http://]+[www.]+[a-z]+".com" {printf("\n valid url\n");}
+.+ {printf("\n invalid url\n");}
 
-[0-9]{2} {printf("\n digit\n");}
-.+ {printf("\n not a digit\n");}
- 
 %%
 
 int yywrap()
@@ -13,6 +12,6 @@ int yywrap()
 
 int main()
 {
-printf("\n enter the input:");
+printf("\n enter the url/:");
 yylex();
 }
