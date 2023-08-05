@@ -24,7 +24,3 @@ int main() {
 
     return 0;
 }
-*************************************************************************************************************************
-Output:
-Enter a string: h e l lo
-Number of white spaces and new lines: 4
