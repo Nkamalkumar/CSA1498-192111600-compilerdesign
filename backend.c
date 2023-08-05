@@ -37,30 +37,3 @@ case '-':
  printf("\n\tMov R%d,%c",i,str[0]);
  }while(strcmp(icode[++i],"exit")!=0);
 }
-******************************************************************************************************************
-output:
-Enter the set of intermediate code (terminated by exit):
-a=a*b
-c=f+h
-g=a+h
-f=q+w
-t=q+i
-exit
-
- target code generation
-************************
-        Mov a,R0
-        MULb,R0
-        Mov R0,a
-        Mov f,R1
-        ADDh,R1
-        Mov R1,c
-        Mov a,R2
-        ADDh,R2
-        Mov R2,g
-        Mov q,R3
-        ADDw,R3
-        Mov R3,f
-        Mov q,R4
-        ADDi,R4
-        Mov R4,t
