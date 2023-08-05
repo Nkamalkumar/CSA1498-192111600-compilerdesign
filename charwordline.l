@@ -1,0 +1,22 @@
+%{
+    int chars = 0, words = 0, lines = 0;
+%}
+
+%%
+
+\n      { ++lines; ++chars; }
+[ \t]   { ++chars; }
+[a-zA-Z]+ { ++words; ++chars; }
+
+%%
+
+int yywrap() {
+    return 1;
+}
+
+int main() {
+   printf("ENTER THE INPUT: ");
+   printf("Lines: %d, Words: %d, Characters: %d\n", lines, words, chars);
+   yylex();
+   return 0;
+}
